@@ -1,0 +1,85 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Dec  7 23:53:01 2016
+;; Desktop file format version 206
+;; Emacs version 24.4.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22600 59181 346120 90000) (desktop . "206") "pi@raspberrypi3" nil nil ((((tty-type . "xterm") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#eeeeec") (cursor-color . "#fce94f") (menu-bar-lines . 0) (tool-bar-lines . 0) (vertical-scroll-bars) (background-color . "#2e3434") (font . "tty") (height . 45) (width . 147) (modeline . t) (unsplittable) (frameset--id . "8972-201F-06D2-9FE4") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 4) (min-pixel-width . 20) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 4) (min-pixel-height-safe . 1) (min-pixel-width-safe . 4)) hc (pixel-width . 147) (pixel-height . 44) (total-width . 147) (total-height . 44) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 74) (pixel-height . 44) (total-width . 74) (total-height . 44) (normal-height . 1.0) (normal-width . 0.5) (buffer "init.el" (selected) (hscroll . 0) (fringes 0 0 nil) (margins 3) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 5089) (start . 4326))) (leaf (last . t) (pixel-width . 73) (pixel-height . 44) (total-width . 73) (total-height . 44) (normal-height . 1.0) (normal-width . 0.5) (buffer "*eshell*" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1034) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("counsel" "config"))
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/lisp/helm-company.el" "~/.emacs.d/lisp/" "/home/pi/.emacs.d/themes/arjen-grey.el" "/home/pi/.emacs.d/lisp/arjen-theme.el" "/home/pi/.emacs.d/lisp/which-key.el" "/home/pi/.emacs.d/ob-tangle.el" "/home/pi/.emacs.d/init.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(company-mode which-key-mode linum-mode paredit-mode paredit-everywhere-mode helm-mode)
+  5089
+  '(1305 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/lisp/helm-company.el"
+  "helm-company.el"
+  'emacs-lisp-mode
+  '(which-key-mode linum-mode paredit-mode helm-mode checkdoc-minor-mode)
+  7236
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/lisp/ob-tangle.el"
+  "ob-tangle.el"
+  'emacs-lisp-mode
+  '(which-key-mode linum-mode paredit-mode helm-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "lisp"
+  'dired-mode
+  '(which-key-mode linum-mode helm-mode)
+  201
+  '(nil nil)
+  t
+  '("/home/pi/.emacs.d/lisp/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/themes/arjen-grey.el"
+  "arjen-grey.el"
+  'emacs-lisp-mode
+  '(which-key-mode linum-mode paredit-mode paredit-everywhere-mode helm-mode)
+  1107
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/lisp/which-key.el"
+  "which-key.el"
+  'emacs-lisp-mode
+  '(which-key-mode linum-mode paredit-mode paredit-everywhere-mode helm-mode)
+  97534
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+

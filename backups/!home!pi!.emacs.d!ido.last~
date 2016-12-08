@@ -1,0 +1,31 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/pi/.emacs.d/" . "themes/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/pi/.emacs.d/themes/"
+ "/home/pi/.emacs.d/lisp/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "arjen-grey.el"
+ "arjen-theme.el"
+ "which-key.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/pi/.emacs.d/" (22599 43504 824085 960000) "elpa/" "./" "lisp/" "init.el" "../" "themes/" ".#init.el" "places" ".emacs.desktop" "backups/" ".emacs.desktop.lock" "snippets/" "auto-save-list/" "ido.last")
+
+ ("/home/pi/.emacs.d/themes/" (22599 41296 152680 199000) "./" "../" "arjen-grey.el" "arjen-grey")
+
+ ("/home/pi/.emacs.d/lisp/" (22598 22038 471 845000) "ob-tangle.el" "./" "../" "which-key.el")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
