@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "go-add-tags" "go-add-tags.el" (22598 18348
-;;;;;;  988585 148000))
+;;;### (autoloads nil "go-add-tags" "go-add-tags.el" (22601 9941
+;;;;;;  160650 745000))
 ;;; Generated autoloads from go-add-tags.el
 
 (autoload 'go-add-tags "go-add-tags" "\

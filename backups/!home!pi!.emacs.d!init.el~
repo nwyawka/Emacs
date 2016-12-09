@@ -11,8 +11,6 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(split-window-right)
-
 (require 'package)
 
 (add-to-list 'package-archives
@@ -24,11 +22,13 @@
   (package-refresh-contents))
 
 (defvar myPackages
-  '(helm
+  '(ido
+    flx
+    babel
+    company
     ace-window
     better-defaults
     ein
-    tangotango-theme
     elpy
     exec-path-from-shell
     flycheck
@@ -39,10 +39,8 @@
     go-mode
     js2-mode
     json-mode
-    magit
     markdown-mode
     markdown-preview-mode
-    helm-company
     py-autopep8
     rainbow-delimiters
     smart-mode-line
@@ -50,48 +48,76 @@
     yaml-mode
     which-key
     counsel
-    hydra
     org
     swiper
     htmlize
     flatland-theme
     paredit
+    paredit-everywhere
     spacegray-theme
-    command-log-mode))
+    command-log-mode
+    smex))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
       (package-install package)))
       myPackages)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/helm-company.el")
-(require 'helm-company)
-
-
 (add-to-list 'load-path "~/.emacs.d/lisp/ob-tangle.el")
-(require 'ob-tangle) 
+(require 'ob-tangle)
 
-(which-key-setup-minibuffer)
-(setq which-key-popup-type 'minibuffer)
+(require 'smex) ; Not needed if you use package.el
+(smex-initialize)
 
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
-(require 'helm)
+; And add babel inline code execution babel, for executing code in org-mode.
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ ; load all language marked with (lang . t).
+ '((C . t)
+   (R . t)
+   (asymptote)
+   (awk . t)
+   (calc)
+   (clojure)
+   (comint)
+   (css . t)
+   (ditaa . t)
+   (dot . t)
+   (emacs-lisp . t)
+   (fortran . t)
+   (gnuplot . t)
+   (haskell)
+   (io)
+   (java)
+   (js . t)
+   (latex)
+   (ledger)
+   (lilypond)
+   (lisp)
+   (matlab)
+   (maxima)
+   (mscgen)
+   (ocaml)
+   (octave)
+   (org . t)
+   (perl . t)
+   (picolisp)
+   (plantuml)
+   (python . t)
+   (ref)
+   (ruby . t)
+   (sass . t)
+   (scala . t)
+   (scheme)
+   (screen)
+   (sh . t)
+   (shen)
+   (sql . t)
+   (sqlite)))
 
-(setq helm-split-window-in-side-p     t ; open helm buffer in current window, not occupy whole other window
-      helm-move-to-line-cycle-in-source t ; move to nd or beg of source when reaching top or bot of source.
-      helm-ff-search-library-in-sexp   t ; search for library in `require' and `declare-function' sexp.
-      helm-scroll-amount               8 ; scroll 8 lines other window using M-<next>/M-<prior>
-      helm-ff-file-name-history-use-recentf t
-      helm-echo-input-in-header-line t)
-
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-x r b") 'helm-bookmarks)
-(global-set-key (kbd "C-x m") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(add-hook 'after-init-hook 'global-company-mode)
 
 (allout-mode)
 
@@ -103,9 +129,28 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
-;(global-hl-line-mode 1)
+(global-hl-line-mode 1)
+(set-face-background hl-line-face "white")
 
-; Activate org-mode
+(setq ido-use-filename-at-point 'guess)
+
+(setq ido-grid-mode-max-columns 1
+      ido-grid-mode-max-rows 8
+      ido-grid-mode-prefix-scrolls t
+      ido-grid-mode-scroll-down #'ido-grid-mode-next-row
+      ido-grid-mode-scroll-up #'ido-grid-mode-previous-row
+      ido-grid-mode-order nil
+      ido-grid-mode-start-collapsed t)
+
+(setq ido-create-new-buffer 'always)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+
+(add-to-list 'load-path "~/.emacs.d/lisp/describe-prefix-bindings.el")
+(global-set-key (kbd "C-x r") 'describe-prefix-bindings)
+
+;org-mode
 (require 'org)
 ; and some more org stuff
 ; http://orgmode.org/guide/Activation.html#Activation
@@ -113,60 +158,14 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'tangotango t) ;; load material theme
-(global-linum-mode t) ;; enable line numbers globally
-
+;(global-linum-mode t) ;; enable line numbers globally
+(global-font-lock-mode 1)
 (global-prettify-symbols-mode 1)
+(set-face-attribute 'font-lock-comment-face nil :foreground "red" )
 
-(set-face-attribute 'font-lock-comment-face nil :foreground "#f44242")
-
-;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-;;(load-theme 'arjen-grey t))
-
-(defhydra hydra-buffer-menu (:color pink
-                                    :hint nil)
-    "
-^Mark^             ^Unmark^           ^Actions^          ^Search
-^^^^^^^^-----------------------------------------------------------------
-_m_: mark          _u_: unmark        _x_: execute       _R_: re-isearch
-_s_: save          _U_: unmark up     _b_: bury          _I_: isearch
-_d_: delete        ^ ^                _g_: refresh       _O_: multi-occur
-_D_: delete up     ^ ^                _T_: files only: % -28`Buffer-menu-files-only
-_~_: modified
-"
-    ("m" Buffer-menu-mark)
-    ("u" Buffer-menu-unmark)
-    ("U" Buffer-menu-backup-unmark)
-    ("d" Buffer-menu-delete)
-    ("D" Buffer-menu-delete-backwards)
-    ("s" Buffer-menu-save)
-    ("~" Buffer-menu-not-modified)
-    ("x" Buffer-menu-execute)
-    ("b" Buffer-menu-bury)
-    ("g" revert-buffer)
-    ("T" Buffer-menu-toggle-files-only)
-    ("O" Buffer-menu-multi-occur :color blue)
-    ("I" Buffer-menu-isearch-buffers :color blue)
-    ("R" Buffer-menu-isearch-buffers-regexp :color blue)
-    ("c" nil "cancel")
-    ("v" Buffer-menu-select "select" :color blue)
-    ("o" Buffer-menu-other-window "other-window" :color blue)
-    ("q" quit-window "quit" :color blue))
-
-(define-key Buffer-menu-mode-map "." 'hydra-buffer-menu/body)
-
-(defun iwb ()
-  "indent whole buffer"
-  (interactive)
-  (delete-trailing-whitespace)
-  (indent-region (point-min) (point-max) nil)
-  (untabify (point-min) (point-max)))
-
-(autoload 'helm-company "helm-company") ;; Not necessary if using ELPA package
-(eval-after-load 'company
-  '(progn
-     (define-key company-mode-map (kbd "C-:") 'helm-company)
-          (define-key company-active-map (kbd "C-:") 'helm-company)))
+; Activate transparent GnuPG encryption.
+(require 'epa-file)
+;(epa-file-enable)
 
 (global-set-key (kbd "M-p") 'ace-window)
 (setq aw-background nil)
@@ -201,4 +200,17 @@ _~_: modified
               ))
 
 ;; init.el ends here
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("a2e7b508533d46b701ad3b055e7c708323fb110b6676a8be458a758dd8f24e27" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

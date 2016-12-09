@@ -1,0 +1,259 @@
+;; init.el --- Emacs configuration
+
+(desktop-save-mode 1)
+
+(setq user-full-name "Matthew S. ONeil")
+(setq user-mail-address "nwyawka@gmail.com")
+(setq python-indent-offset 4)
+
+;; INSTALL PACKAGES
+;; --------------------------------------
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(split-window-right)
+
+(require 'package)
+
+(add-to-list 'package-archives
+       '("melpa" . "http://melpa.org/packages/"))
+
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar myPackages
+  '(ido
+    babel
+    company
+    ace-window
+    better-defaults
+    ein
+    elpy
+    exec-path-from-shell
+    flycheck
+    go-add-tags
+    go-autocomplete
+    go-eldoc
+    go-guru
+    go-mode
+    js2-mode
+    json-mode
+    magit
+    markdown-mode
+    markdown-preview-mode
+    py-autopep8
+    rainbow-delimiters
+    smart-mode-line
+    web-mode
+    yaml-mode
+    which-key
+    counsel
+    hydra
+    org
+    swiper
+    htmlize
+    flatland-theme
+    paredit
+    spacegray-theme
+    command-log-mode))
+
+(mapc #'(lambda (package)
+    (unless (package-installed-p package)
+      (package-install package)))
+      myPackages)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/ob-tangle.el")
+(require 'ob-tangle) 
+
+(which-key-setup-minibuffer)
+(setq which-key-popup-type 'minibuffer)
+
+;; BASIC CUSTOMIZATION
+;; --------------------------------------
+; And add babel inline code execution babel, for executing code in org-mode.
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ ; load all language marked with (lang . t).
+ '((C . t)
+   (R . t)
+   (asymptote)
+   (awk . t)
+   (calc)
+   (clojure)
+   (comint)
+   (css . t)
+   (ditaa . t)
+   (dot . t)
+   (emacs-lisp . t)
+   (fortran . t)
+   (gnuplot . t)
+   (haskell)
+   (io)
+   (java)
+   (js . t)
+   (latex)
+   (ledger)
+   (lilypond)
+   (lisp)
+   (matlab)
+   (maxima)
+   (mscgen)
+   (ocaml)
+   (octave)
+   (org . t)
+   (perl . t)
+   (picolisp)
+   (plantuml)
+   (python . t)
+   (ref)
+   (ruby . t)
+   (sass . t)
+   (scala . t)
+   (scheme)
+   (screen)
+   (sh . t)
+   (shen)
+   (sql . t)
+   (sqlite)))
+
+;(require 'helm)
+;(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;(global-set-key (kbd "C-x r b") 'helm-bookmarks)
+;(global-set-key (kbd "C-x m") 'helm-M-x)
+;(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+(allout-mode)
+
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+(global-hl-line-mode 1)
+(set-face-background hl-line-face "white")
+
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+(setq ido-vertical-show-count t)
+
+; Activate org-mode
+(require 'org)
+; and some more org stuff
+; http://orgmode.org/guide/Activation.html#Activation
+; The following lines are always needed.  Choose your own keys.
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+(setq inhibit-startup-message t) ;; hide the startup message
+;(global-linum-mode t) ;; enable line numbers globally
+
+(global-font-lock-mode 1)
+
+(global-prettify-symbols-mode 1)
+
+(set-face-attribute 'font-lock-comment-face nil :foreground "red" )
+
+;;customize theme
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el-master/")
+;(add-to-list 'load-path "~/.emacs.d/moe-theme.el-master/")
+;    (require 'moe-dark-theme)
+
+; Activate transparent GnuPG encryption.
+(require 'epa-file)
+;(epa-file-enable)
+
+(defhydra hydra-buffer-menu (:color pink
+                                    :hint nil)
+    "
+^Mark^             ^Unmark^           ^Actions^          ^Search
+^^^^^^^^-----------------------------------------------------------------
+_m_: mark          _u_: unmark        _x_: execute       _R_: re-isearch
+_s_: save          _U_: unmark up     _b_: bury          _I_: isearch
+_d_: delete        ^ ^                _g_: refresh       _O_: multi-occur
+_D_: delete up     ^ ^                _T_: files only: % -28`Buffer-menu-files-only
+_~_: modified
+"
+    ("m" Buffer-menu-mark)
+    ("u" Buffer-menu-unmark)
+    ("U" Buffer-menu-backup-unmark)
+    ("d" Buffer-menu-delete)
+    ("D" Buffer-menu-delete-backwards)
+    ("s" Buffer-menu-save)
+    ("~" Buffer-menu-not-modified)
+    ("x" Buffer-menu-execute)
+    ("b" Buffer-menu-bury)
+    ("g" revert-buffer)
+    ("T" Buffer-menu-toggle-files-only)
+    ("O" Buffer-menu-multi-occur :color blue)
+    ("I" Buffer-menu-isearch-buffers :color blue)
+    ("R" Buffer-menu-isearch-buffers-regexp :color blue)
+    ("c" nil "cancel")
+    ("v" Buffer-menu-select "select" :color blue)
+    ("o" Buffer-menu-other-window "other-window" :color blue)
+    ("q" quit-window "quit" :color blue))
+
+(define-key Buffer-menu-mode-map "." 'hydra-buffer-menu/body)
+
+(defun iwb ()
+  "indent whole buffer"
+  (interactive)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max)))
+
+(global-set-key (kbd "M-p") 'ace-window)
+(setq aw-background nil)
+
+;; PYTHON CONFIGURATION
+;; --------------------------------------
+
+(elpy-enable)
+(elpy-use-ipython)
+
+;; use flycheck not flymake with elpy
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;; enable autopep8 formatting on save
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+;; enable autopep8 formatting on save
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+;; Ensure paredit is used EVERYWHERE!
+(require 'paredit-everywhere)
+(add-hook 'prog-mode-hook #'paredit-everywhere-mode)
+
+(require 'rainbow-delimiters)
+(add-hook 'lisp-mode-hook
+            (lambda()
+              (rainbow-delimiters-mode)
+              ))
+
+;; init.el ends here
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("d8f76414f8f2dcb045a37eb155bfaa2e1d17b6573ed43fb1d18b936febc7bbc2" "74278d14b7d5cf691c4d846a4bbf6e62d32104986f104c1e61f718f9669ec04b" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(minibuffer-prompt ((t (:foreground "cyan")))))

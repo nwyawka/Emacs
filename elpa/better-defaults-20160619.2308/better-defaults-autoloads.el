@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "better-defaults" "better-defaults.el" (22598
-;;;;;;  18238 649373 708000))
+;;;### (autoloads nil "better-defaults" "better-defaults.el" (22601
+;;;;;;  9834 291463 255000))
 ;;; Generated autoloads from better-defaults.el
 
 (unless (fboundp 'helm-mode) (ido-mode t) (setq ido-enable-flex-matching t))

@@ -3,8 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "go-guru" "go-guru.el" (22598 18358 608530
-;;;;;;  572000))
+;;;### (autoloads nil "go-guru" "go-guru.el" (22601 9952 350565 632000))
 ;;; Generated autoloads from go-guru.el
 
 (autoload 'go-guru-set-scope "go-guru" "\

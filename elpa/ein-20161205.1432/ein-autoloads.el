@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ein-connect" "ein-connect.el" (22598 18244
-;;;;;;  409330 497000))
+;;;### (autoloads nil "ein-connect" "ein-connect.el" (22601 9840
+;;;;;;  61419 403000))
 ;;; Generated autoloads from ein-connect.el
 
 (autoload 'ein:connect-to-notebook-command "ein-connect" "\
@@ -40,8 +40,8 @@ notebook.
 
 ;;;***
 
-;;;### (autoloads nil "ein-console" "ein-console.el" (22598 18244
-;;;;;;  59333 124000))
+;;;### (autoloads nil "ein-console" "ein-console.el" (22601 9839
+;;;;;;  831421 151000))
 ;;; Generated autoloads from ein-console.el
 
 (autoload 'ein:console-open "ein-console" "\
@@ -60,8 +60,7 @@ It should be possible to support python-mode.el.  Patches are welcome!
 
 ;;;***
 
-;;;### (autoloads nil "ein-dev" "ein-dev.el" (22598 18244 649328
-;;;;;;  696000))
+;;;### (autoloads nil "ein-dev" "ein-dev.el" (22601 9840 351417 199000))
 ;;; Generated autoloads from ein-dev.el
 
 (autoload 'ein:dev-insert-mode-map "ein-dev" "\
@@ -88,8 +87,8 @@ Open a buffer with bug report template.
 
 ;;;***
 
-;;;### (autoloads nil "ein-helm" "ein-helm.el" (22598 18243 729335
-;;;;;;  600000))
+;;;### (autoloads nil "ein-helm" "ein-helm.el" (22601 9839 351424
+;;;;;;  799000))
 ;;; Generated autoloads from ein-helm.el
 
 (autoload 'anything-ein-kernel-history "ein-helm" "\
@@ -114,8 +113,8 @@ Choose opened notebook using helm interface.
 
 ;;;***
 
-;;;### (autoloads nil "ein-iexec" "ein-iexec.el" (22598 18244 389330
-;;;;;;  647000))
+;;;### (autoloads nil "ein-iexec" "ein-iexec.el" (22601 9840 41419
+;;;;;;  555000))
 ;;; Generated autoloads from ein-iexec.el
 
 (autoload 'ein:iexec-mode "ein-iexec" "\
@@ -127,8 +126,8 @@ change in its input area.
 
 ;;;***
 
-;;;### (autoloads nil "ein-ipynb-mode" "ein-ipynb-mode.el" (22598
-;;;;;;  18243 639336 275000))
+;;;### (autoloads nil "ein-ipynb-mode" "ein-ipynb-mode.el" (22601
+;;;;;;  9839 251425 559000))
 ;;; Generated autoloads from ein-ipynb-mode.el
 
 (autoload 'ein:ipynb-mode "ein-ipynb-mode" "\
@@ -140,8 +139,8 @@ A simple mode for ipynb file.
 
 ;;;***
 
-;;;### (autoloads nil "ein-jedi" "ein-jedi.el" (22598 18244 199332
-;;;;;;  73000))
+;;;### (autoloads nil "ein-jedi" "ein-jedi.el" (22601 9839 911420
+;;;;;;  543000))
 ;;; Generated autoloads from ein-jedi.el
 
 (autoload 'ein:jedi-complete "ein-jedi" "\
@@ -168,8 +167,8 @@ To use EIN and Jedi together, add the following in your Emacs setup.::
 
 ;;;***
 
-;;;### (autoloads nil "ein-junk" "ein-junk.el" (22598 18243 949333
-;;;;;;  949000))
+;;;### (autoloads nil "ein-junk" "ein-junk.el" (22601 9839 771421
+;;;;;;  607000))
 ;;; Generated autoloads from ein-junk.el
 
 (autoload 'ein:junk-new "ein-junk" "\
@@ -189,8 +188,8 @@ and save it immediately.
 
 ;;;***
 
-;;;### (autoloads nil "ein-kernel" "ein-kernel.el" (22598 18243 599336
-;;;;;;  575000))
+;;;### (autoloads nil "ein-kernel" "ein-kernel.el" (22601 9839 211425
+;;;;;;  863000))
 ;;; Generated autoloads from ein-kernel.el
 
 (defalias 'ein:kernel-url-or-port 'ein:$kernel-url-or-port)
@@ -199,8 +198,8 @@ and save it immediately.
 
 ;;;***
 
-;;;### (autoloads nil "ein-multilang" "ein-multilang.el" (22598 18244
-;;;;;;  429330 347000))
+;;;### (autoloads nil "ein-multilang" "ein-multilang.el" (22601 9840
+;;;;;;  121418 947000))
 ;;; Generated autoloads from ein-multilang.el
 
 (autoload 'ein:notebook-multilang-mode "ein-multilang" "\
@@ -210,16 +209,16 @@ Notebook mode with multiple language fontification.
 
 ;;;***
 
-;;;### (autoloads nil "ein-notebook" "ein-notebook.el" (22598 18244
-;;;;;;  499329 822000))
+;;;### (autoloads nil "ein-notebook" "ein-notebook.el" (22601 9840
+;;;;;;  161418 643000))
 ;;; Generated autoloads from ein-notebook.el
 
 (defalias 'ein:notebook-name 'ein:$notebook-notebook-name)
 
 ;;;***
 
-;;;### (autoloads nil "ein-notebooklist" "ein-notebooklist.el" (22598
-;;;;;;  18244 89332 898000))
+;;;### (autoloads nil "ein-notebooklist" "ein-notebooklist.el" (22601
+;;;;;;  9839 851420 999000))
 ;;; Generated autoloads from ein-notebooklist.el
 
 (autoload 'ein:notebooklist-open "ein-notebooklist" "\
@@ -280,8 +279,7 @@ See also:
 
 ;;;***
 
-;;;### (autoloads nil "ein-org" "ein-org.el" (22598 18242 979341
-;;;;;;  227000))
+;;;### (autoloads nil "ein-org" "ein-org.el" (22601 9838 651430 119000))
 ;;; Generated autoloads from ein-org.el
 
 (autoload 'ein:org-open "ein-org" "\
@@ -317,7 +315,7 @@ node `(org) External links' and Info node `(org) Search options'
 ;;;***
 
 ;;;### (autoloads nil "ein-pseudo-console" "ein-pseudo-console.el"
-;;;;;;  (22598 18243 299338 826000))
+;;;;;;  (22601 9838 961427 763000))
 ;;; Generated autoloads from ein-pseudo-console.el
 
 (autoload 'ein:pseudo-console-mode "ein-pseudo-console" "\
@@ -328,7 +326,7 @@ Pseudo console mode.  Hit RET to execute code.
 ;;;***
 
 ;;;### (autoloads nil "ein-shared-output" "ein-shared-output.el"
-;;;;;;  (22598 18243 969333 799000))
+;;;;;;  (22601 9839 791421 455000))
 ;;; Generated autoloads from ein-shared-output.el
 
 (autoload 'ein:shared-output-pop-to-buffer "ein-shared-output" "\
@@ -357,8 +355,8 @@ shared output buffer.  You can open the buffer by the command
 
 ;;;***
 
-;;;### (autoloads nil "ein-traceback" "ein-traceback.el" (22598 18244
-;;;;;;  289331 398000))
+;;;### (autoloads nil "ein-traceback" "ein-traceback.el" (22601 9839
+;;;;;;  951420 239000))
 ;;; Generated autoloads from ein-traceback.el
 
 (autoload 'ein:tb-show "ein-traceback" "\
@@ -376,7 +374,7 @@ Show full traceback in traceback viewer.
 ;;;;;;  "ein-pager.el" "ein-pkg.el" "ein-python.el" "ein-pytools.el"
 ;;;;;;  "ein-query.el" "ein-scratchsheet.el" "ein-smartrep.el" "ein-subpackages.el"
 ;;;;;;  "ein-utils.el" "ein-websocket.el" "ein-worksheet.el" "ein.el"
-;;;;;;  "ob-ein.el") (22598 18244 875035 128000))
+;;;;;;  "ob-ein.el") (22601 9840 569265 543000))
 
 ;;;***
 

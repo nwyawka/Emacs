@@ -1,2 +1,57 @@
 ls
 ls
+git init
+git add readme.md
+git add README.md
+touch README.md
+git add README.md
+git commit -m "first commit"
+git config --global user.email "nwyawka@gmail.com"
+git config --global user.name "nwyawka"
+git remote add origin git@github.com:nwyawka/emacs.git
+git push -u origin master
+git push -u origin master
+git add .
+git push -u origin master
+git show-ref
+git add README.md 
+git add .
+git commit -m "reinitialized"
+git push origin master --force
+git push -u origin master
+git remote add origin https://github.com/nwyawka/emacs.git
+git remote add origin https://github.com/nwyawka/emacs.git
+git remote remove origin git@github.com:nwyawka/emacs.git
+git remote remove git@github.com:nwyawka/emacs.git
+git remote remove emacs
+cd ..
+ls -al ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "nwyawka@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-agent -s
+ssh-add ~/.ssh/id_rsa
+cat id_rsa
+ls
+cat ./ssh/id_rsa
+cat ~/ssh/id_rsa
+cat ~/.ssh/id_rsa
+git remote add origin git@github.com:nwyawka/emacs.git
+clear
+clc
+clr
+git push -u origin master
+cs .emacs.d/
+cd .emacs.d/
+git remote add origin git@github.com:nwyawka/emacs.git
+git push -u origin master
+wget https://github.com/kuanyui/moe-theme.el/archive/master.zip
+unzip master.zip 
+ls
+cd moe-theme.el-master/
+ls
+ls
+cd moe-theme.el-master/
+ls
+ls
+test             
+ls
