@@ -39,6 +39,7 @@
     go-mode
     js2-mode
     json-mode
+    magit
     markdown-mode
     markdown-preview-mode
     py-autopep8
@@ -67,11 +68,13 @@
 (require 'ob-tangle)
 
 (require 'smex) ; Not needed if you use package.el
-(smex-initialize)
+(smex-initialize) 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; OLD M-x
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------

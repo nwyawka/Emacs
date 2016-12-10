@@ -2,7 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/pi/.emacs.d/" . "themes/")
+ ("/home/pi/.emacs.d/" . "lisp/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -16,6 +16,7 @@
 ;; ----- ido-work-file-list -----
 (
  "cheapwordcount.el"
+ "run-git.el"
  "desktoplock.el"
  "arjen-grey.el"
  "arjen-theme.el"
@@ -24,11 +25,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/pi/.emacs.d/" (22603 10734 593748 987000) "tests/" "doc/" "elpa/" "emacs.d/" "./" "master.zip.1" "spacemacs-master/" "super-emacs/" "lisp/" "README.md" "initsave1" "init.el" ".#run-git.el" "private/" ".cache/" "../" ".git/" "ac-comphist.dat" "moe-theme.el-master/" "themes/" "#run-git.el#" ".#init.el" "places" "initsave" "news/" "smex-items" "eshell/" ".emacs.desktop" "backups/" ".emacs.desktop.lock" "#init.el#" "master.zip" "assets/" "spacemacs.mk" "snippets/" "cheapwordcount.el" "auto-save-list/" "core/" "ido.last" "layers/")
+
  ("/home/pi/.emacs.d/lisp/" (22602 12744 701682 487000) "helm-company.el" "ob-tangle.el" "./" "../" "ido-describe-prefix-bindings.el" "which-key.el")
 
  ("/home/pi/emacs.d/" (22602 8974 305047 554000) "tests/" "doc/" "./" ".travis-build.sh" "README.md" "init.el" "private/" "CONTRIBUTING.org" ".github/" "../" ".git/" "desktoplock.el" "COMMUNITY.org" "CHANGELOG.org" ".gitignore" "news/" ".travis.yml" "assets/" "spacemacs.mk" "core/" ".projectile" "layers/")
-
- ("/home/pi/.emacs.d/" (22602 19267 843617 520000) "tests/" "doc/" "elpa/" "emacs.d/" "./" "master.zip.1" "spacemacs-master/" "super-emacs/" "lisp/" "README.md" "initsave1" "init.el" "private/" ".cache/" "../" ".git/" "ac-comphist.dat" "moe-theme.el-master/" "themes/" "places" "initsave" "news/" "smex-items" "eshell/" ".emacs.desktop" "backups/" ".emacs.desktop.lock" "master.zip" "assets/" "spacemacs.mk" "snippets/" "auto-save-list/" "core/" "ido.last" "layers/")
 
  ("/home/pi/.emacs.d/themes/" (22599 41387 411902 504000) "./" "../" "arjen-grey-theme.el" "arjen-grey.el" "arjen-grey")
 

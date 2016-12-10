@@ -55,3 +55,7 @@ ls
 ls
 test             
 ls
+pwd
+ls
+ls -al
+touch .gittable

@@ -1,16 +1,17 @@
 
 ;; ----- smex-history -----
 (
+ magit-status
+ eshell
  cd
  5x5
  arp
  dbx
  dig
- erc
- ert
 )
 
 ;; ----- smex-data -----
 (
- 
+ (eshell . 1)
+ (magit-status . 1)
 )

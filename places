@@ -5,9 +5,9 @@
  ("/home/pi/.emacs.d/themes/"
   (dired-filename . "/home/pi/.emacs.d/themes/arjen-grey-theme.el"))
  ("/home/pi/.emacs.d/lisp/ido-describe-prefix-bindings.el" . 6691)
- ("/home/pi/.emacs.d/cheapwordcount.el" . 458)
- ("/home/pi/.emacs.d/init.el" . 1271)
- ("/home/pi/.emacs.d/ido.last" . 1994)
+ ("/home/pi/.emacs.d/run-git.el" . 333)
+ ("/home/pi/.emacs.d/init.el" . 1492)
+ ("/home/pi/.emacs.d/ido.last" . 2080)
  ("/home/pi/.emacs.d/elpa/smex-20151212.1409/smex-autoloads.el" . 500)
  ("/home/pi/emacs.d/desktoplock.el" . 1159)
  ("/home/pi/.emacs.d/elpa/paredit-everywhere-20150821.2144/paredit-everywhere-autoloads.el" . 481)

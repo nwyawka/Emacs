@@ -2,28 +2,50 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Dec  9 01:48:40 2016
+;; Created Sat Dec 10 00:09:36 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22602 21448 771030 52000) (desktop . "206") "pi@raspberrypi3" nil nil ((((tty-type . "xterm") (tty . "/dev/tty") (display-type . color) (background-mode . light) (foreground-color . "unspecified-fg") (cursor-color . "black") (menu-bar-lines . 0) (tool-bar-lines . 0) (vertical-scroll-bars) (background-color . "unspecified-bg") (font . "tty") (height . 53) (width . 129) (modeline . t) (unsplittable) (frameset--id . "2952-FE60-4852-B500") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 129) (pixel-height . 52) (total-width . 129) (total-height . 52) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 3) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1271) (start . 813))))])
+(setq desktop-saved-frameset [frameset 1 (22603 36368 615809 442000) (desktop . "206") "pi@raspberrypi3" nil nil ((((tty-type . "xterm") (tty . "/dev/tty") (display-type . color) (background-mode . light) (foreground-color . "unspecified-fg") (cursor-color . "black") (menu-bar-lines . 0) (tool-bar-lines . 0) (vertical-scroll-bars) (background-color . "unspecified-bg") (font . "tty") (height . 53) (width . 91) (modeline . t) (unsplittable) (frameset--id . "BB9F-5A8A-7B30-891C") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 91) (pixel-height . 52) (total-width . 91) (total-height . 52) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 3) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1492) (start . 1116))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring '("company" "companu" "font-lock" "counsel" "config"))
 (setq register-alist nil)
-(setq file-name-history '("/home/pi/.emacs.d/cheapwordcount.el" "~/.emacs.d/lisp/ido-describe-prefix-bindings.el" "~/.ssh/id_rsa.pub" "~/.ssh/id_rsa" "~/.emacs.d/lisp/helm-company.el" "~/.emacs.d/lisp/" "/home/pi/.emacs.d/themes/arjen-grey.el" "/home/pi/.emacs.d/lisp/arjen-theme.el" "/home/pi/.emacs.d/lisp/which-key.el" "/home/pi/.emacs.d/ob-tangle.el" "/home/pi/.emacs.d/init.el"))
+(setq file-name-history '("/home/pi/.emacs.d/cheapwordcount.el" "/home/pi/.emacs.d/run-git.el" "/home/pi/.emacs.d/cheapwordcount.el" "~/.emacs.d/lisp/ido-describe-prefix-bindings.el" "~/.ssh/id_rsa.pub" "~/.ssh/id_rsa" "~/.emacs.d/lisp/helm-company.el" "~/.emacs.d/lisp/" "/home/pi/.emacs.d/themes/arjen-grey.el" "/home/pi/.emacs.d/lisp/arjen-theme.el" "/home/pi/.emacs.d/lisp/which-key.el" "/home/pi/.emacs.d/ob-tangle.el" "/home/pi/.emacs.d/init.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
   "/home/pi/.emacs.d/init.el"
   "init.el"
   'emacs-lisp-mode
-  '(company-mode paredit-mode which-key-mode linum-mode helm-mode)
-  1271
-  '(1287 nil)
+  '(company-mode paredit-mode which-key-mode linum-mode helm-mode auto-revert-mode)
+  1492
+  '(1298 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/.git/COMMIT_EDITMSG"
+  "COMMIT_EDITMSG"
+  'text-mode
+  '(auto-fill-mode company-mode which-key-mode helm-mode with-editor-mode git-commit-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/pi/.emacs.d/run-git.el"
+  "run-git.el"
+  'emacs-lisp-mode
+  '(company-mode paredit-mode which-key-mode helm-mode auto-revert-mode)
+  333
+  '(245 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix)))
@@ -32,9 +54,9 @@
   "/home/pi/.emacs.d/cheapwordcount.el"
   "cheapwordcount.el"
   'emacs-lisp-mode
-  '(company-mode paredit-mode which-key-mode helm-mode)
-  458
-  '(230 nil)
+  '(company-mode paredit-mode which-key-mode helm-mode auto-revert-mode)
+  1
+  '(233 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix)))
@@ -43,7 +65,7 @@
   "/home/pi/.emacs.d/lisp/ido-describe-prefix-bindings.el"
   "ido-describe-prefix-bindings.el"
   'emacs-lisp-mode
-  '(company-mode paredit-mode which-key-mode helm-mode)
+  '(company-mode paredit-mode which-key-mode helm-mode auto-revert-mode)
   6691
   '(nil nil)
   nil

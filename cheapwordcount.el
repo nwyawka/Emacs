@@ -1,3 +1,6 @@
+
+
+
 (defun cheap-count-words ()
   (interactive)
   (let ((words 0))
