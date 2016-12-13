@@ -9,7 +9,7 @@
   (dired-filename . "/home/pi/.emacs.d/ac-comphist.dat"))
  ("/home/pi/.emacs.d/lisp/new_funcs.el" . 130)
  ("/home/pi/.emacs.d/init.el" . 759)
- ("/home/pi/.emacs.d/README.org" . 32)
+ ("/home/pi/.emacs.d/README.md" . 25)
  ("/home/pi/.emacs.d/lisp/cheatsheet.el" . 1219)
  ("/home/pi/Desktop/test.py" . 230)
  ("/home/pi/.emacs.d/elpa/discover-my-major-20160108.1041/discover-my-major-autoloads.el" . 687)

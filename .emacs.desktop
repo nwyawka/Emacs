@@ -2,31 +2,31 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Tue Dec 13 01:19:38 2016
+;; Created Tue Dec 13 01:32:27 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22607 37626 287773 204000) (desktop . "206") "pi@raspberrypi3" nil nil ((((tty-type . "xterm") (tty . "/dev/tty") (display-type . color) (background-mode . light) (foreground-color . "unspecified-fg") (cursor-color . "black") (menu-bar-lines . 0) (tool-bar-lines . 0) (vertical-scroll-bars) (background-color . "unspecified-bg") (font . "tty") (height . 67) (width . 124) (modeline . t) (unsplittable) (frameset--id . "C14B-E100-CC0B-9A9E") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 124) (pixel-height . 66) (total-width . 124) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer "README.org" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 32) (start . 1))))])
+(setq desktop-saved-frameset [frameset 1 (22607 38395 969252 487000) (desktop . "206") "pi@raspberrypi3" nil nil ((((tty-type . "xterm") (tty . "/dev/tty") (display-type . color) (background-mode . light) (foreground-color . "unspecified-fg") (cursor-color . "black") (menu-bar-lines . 0) (tool-bar-lines . 0) (vertical-scroll-bars) (background-color . "unspecified-bg") (font . "tty") (height . 67) (width . 124) (modeline . t) (unsplittable) (frameset--id . "3587-856C-7A5F-941D") (frameset--mini t) (minibuffer . t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 124) (pixel-height . 66) (total-width . 124) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer "README.md" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 25) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring '("windmove" "tangle" "\\(couns\\).*?\\(fin\\)" "kbd" "helm" "smex" "ido" "company" "companu" "font-lock" "counsel" "config"))
 (setq register-alist nil)
-(setq file-name-history '("/home/pi/.emacs.d/README.org" "/home/pi/.emacs.d/lisp/cheatsheet.el" "/home/pi/.emacs.d/lisp/cheats.el" "/home/.e" "/home/pi/.emacs.d/lisp/cheat.el" "/home/pi/.emacs.d/init.el" "~/.emacs.d/lisp/ob-tangle.el" "/home/pi/.emacs.d/lisp/new_funcs.el" "/home/pi/Desktop/test.py" "/home/pi/.emacs.d/cheapwordcount.el" "/home/pi/.emacs.d/run-git.el" "/home/pi/.emacs.d/cheapwordcount.el" "~/.emacs.d/lisp/ido-describe-prefix-bindings.el" "~/.ssh/id_rsa.pub" "~/.ssh/id_rsa" "~/.emacs.d/lisp/helm-company.el" "~/.emacs.d/lisp/" "/home/pi/.emacs.d/themes/arjen-grey.el" "/home/pi/.emacs.d/lisp/arjen-theme.el" "/home/pi/.emacs.d/lisp/which-key.el" "/home/pi/.emacs.d/ob-tangle.el"))
+(setq file-name-history '("~/.emacs.d/README.md" "/home/pi/.emacs.d/README.org" "/home/pi/.emacs.d/lisp/cheatsheet.el" "/home/pi/.emacs.d/lisp/cheats.el" "/home/.e" "/home/pi/.emacs.d/lisp/cheat.el" "/home/pi/.emacs.d/init.el" "~/.emacs.d/lisp/ob-tangle.el" "/home/pi/.emacs.d/lisp/new_funcs.el" "/home/pi/Desktop/test.py" "/home/pi/.emacs.d/cheapwordcount.el" "/home/pi/.emacs.d/run-git.el" "/home/pi/.emacs.d/cheapwordcount.el" "~/.emacs.d/lisp/ido-describe-prefix-bindings.el" "~/.ssh/id_rsa.pub" "~/.ssh/id_rsa" "~/.emacs.d/lisp/helm-company.el" "~/.emacs.d/lisp/" "/home/pi/.emacs.d/themes/arjen-grey.el" "/home/pi/.emacs.d/lisp/arjen-theme.el" "/home/pi/.emacs.d/lisp/which-key.el" "/home/pi/.emacs.d/ob-tangle.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/home/pi/.emacs.d/README.org"
-  "README.org"
-  'org-mode
+  "/home/pi/.emacs.d/README.md"
+  "README.md"
+  'markdown-mode
   '(which-key-mode ivy-mode company-mode helm-mode)
-  32
+  25
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+  '((tab-width . 4) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
   "/home/pi/.emacs.d/init.el"
