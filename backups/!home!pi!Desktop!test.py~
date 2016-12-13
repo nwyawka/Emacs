@@ -1,0 +1,18 @@
+from operator import
+
+add(8,8)
+
+emacs = 90
+
+emacs = 99
+
+emacs = 109
+
+emacs3 = 0
+
+class Awesome(object):
+    """Stuff
+    """
+    def __init__(self,*args, **kwargs):
+        super(Awesome, self).__init__(*args, **kwargs)
+    

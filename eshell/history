@@ -59,3 +59,12 @@ pwd
 ls
 ls -al
 touch .gittable
+git add .
+git commit -m "	learning"
+git push -u origin master
+git status
+git log
+git diff
+git log --statu
+git log --status
+git log --stat

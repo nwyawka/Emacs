@@ -1,0 +1,16 @@
+/home/pi/.emacs.d/init.el
+/home/pi/.emacs.d/#init.el#
+/home/pi/.emacs.d/lisp/new_funcs.el
+/home/pi/.emacs.d/lisp/#new_funcs.el#
+/home/pi/.emacs.d/lisp/ob-tangle.el
+/home/pi/.emacs.d/lisp/#ob-tangle.el#
+/home/pi/Desktop/test.py
+/home/pi/Desktop/#test.py#
+/home/pi/.emacs.d/.git/COMMIT_EDITMSG
+/home/pi/.emacs.d/.git/#COMMIT_EDITMSG#
+/home/pi/.emacs.d/run-git.el
+/home/pi/.emacs.d/#run-git.el#
+/home/pi/.emacs.d/cheapwordcount.el
+/home/pi/.emacs.d/#cheapwordcount.el#
+/home/pi/test.org
+/home/pi/#test.org#

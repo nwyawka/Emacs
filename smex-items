@@ -1,17 +1,28 @@
 
 ;; ----- smex-history -----
 (
- magit-status
- eshell
- cd
- 5x5
- arp
- dbx
- dig
+ package-list-packages
+ which-key-mode
+ describe-key
+ dired
+ swiper
+ ivy-mode
+ webjump
 )
 
 ;; ----- smex-data -----
 (
  (eshell . 1)
  (magit-status . 1)
+ (list-packages . 1)
+ (package-list-packages . 4)
+ (package-install . 1)
+ (ielm . 1)
+ (set-variable . 1)
+ (webjump . 1)
+ (swiper . 15)
+ (ivy-mode . 2)
+ (dired . 1)
+ (describe-key . 1)
+ (which-key-mode . 2)
 )
